@@ -1,0 +1,75 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; /* Change the background color to white */
+  padding: 10px 20px;
+  color: #000; /* Change the text color to black */
+  font-family: 'YourSpecialFont', sans-serif; /* Replace 'YourSpecialFont' with your chosen font */
+  transition: 0.3s;
+}
+
+.navbar-title {
+  font-size: 24px;
+}
+
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin-right: 20px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #000; /* Change the link color to black */
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+/* Add this style to hide links and show the background when the menu is toggled */
+.show .navbar-links {
+  display: flex;
+  flex-direction: column;
+  background-color: white; /* Change the background color to white */
+  position: absolute;
+  top: 65px; /* Adjust the top value according to your design */
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.show .navbar-links li {
+  margin: 10px 0; /* Adjust the vertical spacing between links */
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  /* Add this style to make the navbar horizontal in full-screen mode */
+  @media screen and (min-width: 769px) {
+    .navbar-links {
+      display: flex;
+      background-color: transparent;
+      position: static;
+      top: auto;
+    }
+
+    .navbar-links li {
+      margin: 0 20px; /* Reset the margin to horizontal */
+    }
+  }
+}

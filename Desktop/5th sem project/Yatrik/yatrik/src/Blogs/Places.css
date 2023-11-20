@@ -1,0 +1,39 @@
+.slider-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider img {
+  max-width: 100%;
+  height: auto;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.slider-button.left {
+  left: 0;
+}
+
+.slider-button.right {
+  right: 0;
+}
+
+.text-container {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
